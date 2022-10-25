@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { FetchData } from '../Api/FetchData';
+import { FetchData } from '../Api/fetchData';
 
 const Search = ({setDatas}) => {
 
@@ -13,12 +13,15 @@ const Search = ({setDatas}) => {
 
   const handleSubmit = (e) => {
 
-    e.preventDefault()
-    setDatas([])
-    FetchData(`https://dummyjson.com/products/search?q=${product}`)
-    .then(data => {
-      setDatas(data.products)
-    })
+    if(product !== "") {
+      e.preventDefault()
+      setDatas([])
+      FetchData(`https://dummyjson.com/products/search?q=${product}`)
+      .then(data => {
+        setDatas(data.products)
+        setProduct("")
+      })
+    }
   }
 
   return (

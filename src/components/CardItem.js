@@ -10,7 +10,7 @@ const CardItem = ({data}) => {
     <Card style={{ width: '18rem' }} key={id}>
     <Card.Img variant="top" src={thumbnail} />
     <Card.Body>
-      <Card.Title>{title}</Card.Title>
+      <Card.Title><strong>{title}</strong></Card.Title>
       <Card.Text>{brand}</Card.Text>
       <Card.Text>{category}</Card.Text>
       <Card.Text>{price} $</Card.Text>
@@ -21,6 +21,7 @@ const CardItem = ({data}) => {
           value={rating}
           activeColor="#ffd700"
           isHalf={true}
+          edit={false}
         />
 
     </Card.Body>

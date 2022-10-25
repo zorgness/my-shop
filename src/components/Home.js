@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Result from './Result'
-import { FetchData } from '../Api/FetchData'
+import Discount from './Discount';
+import { FetchData } from '../Api/fetchData'
 import ProgressBar from 'react-bootstrap/ProgressBar';
 
 const Home = ({datas, setDatas}) => {
@@ -51,14 +52,13 @@ const Home = ({datas, setDatas}) => {
 
   const handleClick =  async (category) => {
 
-
       await FetchData(`https://dummyjson.com/products/category/${category}`)
       .then(data => {
         setDatas(data.products)
       } )
-
-
   }
+
+
 
   return (
     <>
@@ -91,7 +91,11 @@ const Home = ({datas, setDatas}) => {
 
       <ProgressBar animated now={scroll} />
 
+      <Discount />
+
       <Result datas={datas} />
+
+
 
     </>
 

@@ -21,6 +21,7 @@ const CardItem = ({data}) => {
           value={rating}
           activeColor="#ffd700"
           isHalf={true}
+          edit={false}
         />
 
     </Card.Body>

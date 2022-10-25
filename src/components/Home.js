@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import Result from './Result'
-import { FetchData } from '../Api/FetchData'
+import { FetchData } from '../Api/fetchData'
 import ProgressBar from 'react-bootstrap/ProgressBar';
 
 const Home = ({datas, setDatas}) => {

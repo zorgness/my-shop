@@ -37,8 +37,7 @@ const Home = ({datas, setDatas}) => {
   const handleClick =  async (category) => {
 
 
-
-      await FetchData.js(`https://dummyjson.com/products/category/${category}`)
+      await FetchData(`https://dummyjson.com/products/category/${category}`)
       .then(data => {
         setDatas(data.products)
       } )

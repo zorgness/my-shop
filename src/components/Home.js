@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import Result from './Result'
-import { fetchData } from '../Api/fetchData'
+import { FetchData } from '../Api/FetchData'
 
 const Home = ({datas, setDatas}) => {
 
@@ -11,7 +11,7 @@ const Home = ({datas, setDatas}) => {
 
     const getCategories = async () => {
 
-      await fetchData('https://dummyjson.com/products/categories')
+      await FetchData('https://dummyjson.com/products/categories')
       .then(data => {
         setCategories(data)
         setLoadCategories(false)
@@ -38,7 +38,7 @@ const Home = ({datas, setDatas}) => {
 
 
 
-      await fetchData(`https://dummyjson.com/products/category/${category}`)
+      await FetchData.js(`https://dummyjson.com/products/category/${category}`)
       .then(data => {
         setDatas(data.products)
       } )

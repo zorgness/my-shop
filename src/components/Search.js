@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { fetchData } from '../Api/fetchData';
+import { FetchData } from '../Api/FetchData';
 
 const Search = ({setDatas}) => {
 
@@ -15,7 +15,7 @@ const Search = ({setDatas}) => {
 
     e.preventDefault()
     setDatas([])
-    fetchData(`https://dummyjson.com/products/search?q=${product}`)
+    FetchData(`https://dummyjson.com/products/search?q=${product}`)
     .then(data => {
       setDatas(data.products)
     })

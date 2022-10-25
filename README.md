@@ -2,7 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## E-commerce project with React.js
+## E-commerce project with React.js (still in process)
+
+https://my-shop-challenge.herokuapp.com/
 
 <img src="https://i.ibb.co/6yWBfCg/Capture-d-e-cran-2022-10-25-a-17-48-05.png" alt="Capture-d-e-cran-2022-10-25-a-17-48-05" border="0" width="240px" height="auto">
 

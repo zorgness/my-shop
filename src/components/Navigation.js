@@ -8,7 +8,7 @@ const Navigation = ({setDatas}) => {
   return (
     <Navbar bg="primary" expand="lg" variant="dark">
       <Container fluid>
-        <Navbar.Brand href="#">My Shop</Navbar.Brand>
+        <Navbar.Brand href="/">My Shop</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -16,7 +16,7 @@ const Navigation = ({setDatas}) => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="#action2">Link</Nav.Link>
             <NavDropdown title="Link" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Action</NavDropdown.Item>

@@ -26,7 +26,6 @@ const Discount = () => {
     })
   }
 
-  console.log(products)
 
   return (
     <div className='bg-dark p-3'>

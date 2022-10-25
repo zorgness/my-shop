@@ -59,7 +59,6 @@ const Home = ({datas, setDatas}) => {
   }
 
 
-
   return (
     <>
 
@@ -91,10 +90,9 @@ const Home = ({datas, setDatas}) => {
 
       <ProgressBar animated now={scroll} />
 
-      <Discount />
-
-      <Result datas={datas} />
-
+      {
+        datas.length > 0 ? <Result datas={datas} />  :<Discount />
+      }
 
 
     </>

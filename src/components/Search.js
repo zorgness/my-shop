@@ -13,12 +13,15 @@ const Search = ({setDatas}) => {
 
   const handleSubmit = (e) => {
 
-    e.preventDefault()
-    setDatas([])
-    FetchData(`https://dummyjson.com/products/search?q=${product}`)
-    .then(data => {
-      setDatas(data.products)
-    })
+    if(product !== "") {
+      e.preventDefault()
+      setDatas([])
+      FetchData(`https://dummyjson.com/products/search?q=${product}`)
+      .then(data => {
+        setDatas(data.products)
+        setProduct("")
+      })
+    }
   }
 
   return (

@@ -13,7 +13,7 @@ const Result = ({datas}) => {
 
 
   return (
-    <div className='d-flex justify-content-around flex-wrap gap-5'>
+    <div className='d-flex justify-content-around flex-wrap gap-5 mt-4'>
       {
         displayCards
       }
